@@ -1,0 +1,2 @@
+vhdl work "../MR4 Simplificada e com Hold/mrStd.vhd"
+vhdl work "../MR4 Simplificada e com Hold/mrStd_tb.vhd"
