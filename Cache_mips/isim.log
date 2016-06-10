@@ -17,6 +17,20 @@ at 0 ps, Instance /cpu_tb/cpu/dp/REGS/ : Warning: CONV_INTEGER: There is an 'U'|
 at 0 ps: Error: ******************* INVALID INSTRUCTION *************
 at 0 ps, Instance /cpu_tb/cpu/dp/REGS/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 # restart
+# run 1.00us
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /cpu_tb/cpu/dp/REGS/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+Finished circuit initialization process.
+at 0 ps, Instance /cpu_tb/cpu/dp/REGS/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 0 ps: Error: ******************* INVALID INSTRUCTION *************
+at 0 ps, Instance /cpu_tb/cpu/dp/REGS/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
 # restart
 # run 1.00us
 Simulator is doing circuit initialization process.
@@ -31,5 +45,194 @@ at 0 ps, Instance /cpu_tb/cpu/dp/REGS/ : Warning: CONV_INTEGER: There is an 'U'|
 # run 1.00us
 # run 1.00us
 # run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+at 14740 ns(5), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14740 ns(5), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14760 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14760 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14800 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14800 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14800 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14800 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14800 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14800 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14840 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14840 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14880 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14880 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14880 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14880 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14880 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14880 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14920 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14920 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14960 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14960 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14960 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14960 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14960 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14960 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15 us, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15 us, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# run 1.00us
+at 15040 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15040 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15040 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15040 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15040 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15040 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15080 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15080 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15120 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15120 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15120 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15120 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15120 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15120 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15160 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15160 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15200 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15200 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15200 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15200 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15200 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15200 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15240 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15240 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15280 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15280 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15280 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15280 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15280 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15280 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15320 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15320 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15360 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15360 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15360 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15360 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15360 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15360 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15400 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15400 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15440 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15440 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15440 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15440 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15440 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15440 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15510 ns(1), Instance /cpu_tb/cpu/dp/REGS/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15510 ns(2), Instance /cpu_tb/cpu/dp/REGS/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15510 ns(3): Error: ******************* INVALID INSTRUCTION *************
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# restart
+# run 1.00us
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /cpu_tb/cpu/dp/REGS/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+Finished circuit initialization process.
+at 0 ps, Instance /cpu_tb/cpu/dp/REGS/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 0 ps: Error: ******************* INVALID INSTRUCTION *************
+at 0 ps, Instance /cpu_tb/cpu/dp/REGS/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+at 14740 ns(5), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14740 ns(5), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14760 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14760 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14800 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14800 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14800 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14800 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14800 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14800 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14840 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14840 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14880 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14880 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14880 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14880 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14880 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14880 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14920 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14920 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14960 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14960 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14960 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14960 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14960 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 14960 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15 us, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15 us, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# run 1.00us
+at 15040 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15040 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15040 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15040 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15040 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15040 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15080 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15080 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15120 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15120 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15120 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15120 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15120 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15120 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15160 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15160 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15200 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15200 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15200 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15200 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15200 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15200 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15240 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15240 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15280 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15280 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15280 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15280 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15280 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15280 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15320 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15320 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15360 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15360 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15360 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15360 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15360 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15360 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15400 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15400 ns, Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15440 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15440 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15440 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15440 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15440 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15440 ns(1), Instance /cpu_tb/Instr_mem/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15510 ns(1), Instance /cpu_tb/cpu/dp/REGS/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15510 ns(2), Instance /cpu_tb/cpu/dp/REGS/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 15510 ns(3): Error: ******************* INVALID INSTRUCTION *************
 # run 1.00us
 # run 1.00us

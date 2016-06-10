@@ -24,6 +24,13 @@ package aux_functions is
    -- definição do tipo 'memory', que será utilizado para as memórias de dados/instruções
    constant MEMORY_SIZE : integer := 2048;     
    type memory is array (0 to MEMORY_SIZE) of reg8;
+	
+	
+	-- definição do tipo 'asc_mem', que será utilizado para as memórias cache L2
+	constant L2_SIZE : integer := 7;
+	type asc_mem is array (0 to L2_SIZE) of std_logic_vector(26 downto 0);
+	
+	type l2_mem is array (0 to L2_SIZE) of std_logic_vector(256 downto 0);
 
    constant TAM_LINHA : integer := 200;
    
@@ -119,7 +126,7 @@ begin
 end RAM_mem_Data;
 
 --------------------------------------------------------------------------
--- Module implementing a behavioral model of an SYNCHRONOUS INTERFACE RAM
+-- Module implementing a behavioral model of a SYNCHRONOUS INTERFACE RAM
 --------------------------------------------------------------------------
 library IEEE;
 use ieee.std_logic_1164.all;
@@ -128,10 +135,11 @@ use work.aux_functions.all;
 
 entity RAM_mem_Instr is
       generic(  START_ADDRESS: reg32 := (others=>'0')  );
-      port( ce_n, we_n, oe_n, bw, ck: in std_logic;   address: in reg32;   data: inout reg32);
+      port( ce_n, we_n, oe_n, bw, ck: in std_logic; hit: out std_logic;   address: in reg32;   data: inout reg32);
 end RAM_mem_Instr;
 
 architecture RAM_mem_Instr of RAM_mem_Instr is
+	signal preHit: std_logic := '0';
    signal RAM : memory;
    signal tmp_address: reg32;
 	signal f_hold: std_logic;
@@ -139,6 +147,9 @@ architecture RAM_mem_Instr of RAM_mem_Instr is
 begin     
 
    tmp_address <= address - START_ADDRESS;   --  offset do endereçamento  -- 
+	
+	hit <= preHIT;
+	--hit <= ck when ce_n = '0' else '0';
 	
    
    -- writes in memory SYNCHRONOUSLY  -- LITTLE ENDIAN -------------------
@@ -162,10 +173,13 @@ begin
        if ce_n='0' and oe_n='0' and
           CONV_INTEGER(low_address)>=0 and CONV_INTEGER(low_address+3)<=MEMORY_SIZE then
 			if ck'event and ck = '1' then
+				preHIT <= '1';
             data(31 downto 24) <= RAM(CONV_INTEGER(low_address+3));
             data(23 downto 16) <= RAM(CONV_INTEGER(low_address+2));
             data(15 downto  8) <= RAM(CONV_INTEGER(low_address+1));
             data( 7 downto  0) <= RAM(CONV_INTEGER(low_address  ));
+			elsif ck'event and ck = '0' then
+				preHIT <= '0';
 			end if;
        else
           data(31 downto 24) <= (others=>'Z');
@@ -176,6 +190,150 @@ begin
    end process;   
 
 end RAM_mem_Instr;
+
+
+--------------------------------------------------------------------------
+-- Module implementing a behavioral model of a CACHE L2
+--------------------------------------------------------------------------
+library IEEE;
+use ieee.std_logic_1164.all;
+use ieee.STD_LOGIC_UNSIGNED.all;
+use work.aux_functions.all;
+
+entity Cache_L2 is
+      port(
+		ce_n, ck, hitMem: in std_logic;
+		hit, miss: out std_logic;
+		addressFront: in reg32;
+		addressBack: out reg32;
+		dataFront: inout reg32;
+		dataBack: in reg32);
+end Cache_L2;
+
+architecture Cache_L2 of Cache_L2 is 
+	--signal state: integer;
+	signal hitCheck: std_logic_vector(7 downto 0) := (others => '0');
+	signal wordBuffer: std_logic_vector(256 downto 0) := (others => '0');
+   signal TAG : asc_mem;
+	signal dataCache: l2_mem := (others => wordBuffer);
+	signal update: std_logic := '0';
+	signal preHIT, preMISS: std_logic;
+	signal wordID: std_logic_vector(3 downto 0) := (others => '0');
+	
+begin     
+
+	hit <= preHIT and ck;
+	
+	miss <= preMiss;
+	
+	process(update)
+	variable state: integer := 0;
+	begin
+		if update'event and update = '1' then
+			TAG(state) <= addressFront(31 downto 5);
+			DATACACHE(state) <= wordBuffer;
+			if state < 8 then
+				state := state + 1;
+			else 
+				state := 0;
+			end if;
+		end if;
+	end process;
+
+
+	process(ck)
+	begin
+		if ck'event and ck = '0' then
+			hitL:for i in 0 to 7 loop
+				if TAG(i) = addressFront(31 downto 5) and DATACACHE(i)(256) = '1' then
+					hitCheck(i) <= '1';
+				else 
+					hitCheck(i) <= '0';
+				end if;
+			end loop hitL;
+		end if;
+	end process;
+
+
+
+	--hitL:for i in 0 to 7 generate 
+	--	hitCheck(i) <= '1' when TAG(i) = address(31 downto 3) else '0';
+   --end generate hitL;
+	
+	preHIT <= '1' when hitCheck /= 0 else '0';
+	
+	preMISS <= not(preHIT);
+	
+	process(ck, ce_n)
+	begin
+		if ce_n = '0' then
+			if ck'event and ck = '1' then
+			
+				dout:for l in 0 to 7 loop
+					if hitCheck(l) = '1' then
+						case addressFront(4 downto 2) is
+							when "000" => dataFront <= DATACACHE(l)(255 downto 224);
+							
+							when "001" => dataFront <= DATACACHE(l)(223 downto 192);
+							
+							when "010" => dataFront <= DATACACHE(l)(191 downto 160);
+							
+							when "011" => dataFront <= DATACACHE(l)(159 downto 128);
+							
+							when "100" => dataFront <= DATACACHE(l)(127 downto 96);
+							
+							when "101" => dataFront <= DATACACHE(l)(95 downto 64);
+							
+							when "110" => dataFront <= DATACACHE(l)(63 downto 32);
+							
+							when "111" => dataFront <= DATACACHE(l)(31 downto 0);
+						
+							when others => dataFront <= (others => 'Z');
+						end case;
+					exit dout;
+					end if;
+				end loop dout;
+				
+			end if;
+		else
+			dataFront <= (others=>'Z');
+		end if;
+	end process;
+	
+	addressBack <= addressFront(31 downto 5) & wordID(2 downto 0) & "00";
+	
+	--update <= '1' when wordID = "1000" else '0';
+	
+	
+	process(hitMem, preMISS)
+	begin
+		if ce_n = '0' then
+			if hitMem'event and hitMem = '1' then
+				if preMISS = '1' then
+					wordBuffer(256) <= '1';
+					case wordID is
+						when "0000" => wordBuffer(255 downto 224) <= dataBack;  wordID <= "0001"; 
+						when "0001" => wordBuffer(223 downto 192) <= dataBack;  wordID <= "0010";
+						when "0010" => wordBuffer(191 downto 160) <= dataBack;  wordID <= "0011";
+						when "0011" => wordBuffer(159 downto 128) <= dataBack;  wordID <= "0100";
+						when "0100" => wordBuffer(127 downto 96)  <= dataBack;  wordID <= "0101";
+						when "0101" => wordBuffer(95 downto 64)   <= dataBack;  wordID <= "0110";
+						when "0110" => wordBuffer(63 downto 32)   <= dataBack;  wordID <= "0111";
+						when "0111" => wordBuffer(31 downto 0)    <= dataBack;  wordID <= "1000";
+						when "1000" => wordID <= "0000"; update <= '1';
+						when others => NULL;
+					end case;
+				end if;
+			elsif preMISS = '0' then
+				update <= '0';
+			end if;
+		end if;
+	end process;
+	 
+
+   
+
+end Cache_L2;
 
 -------------------------------------------------------------------------
 --  CPU PROCESSOR SIMULATION TESTBENCH
@@ -191,11 +349,11 @@ end CPU_tb;
 
 architecture cpu_tb of cpu_tb is
     
-    signal Dadress, Ddata, Iadress, Idata,
+    signal Dadress, Ddata, Iadress, memAdd, L2Add, Idata, L2data,
            i_cpu_address, d_cpu_address, data_cpu, tb_add, tb_data : reg32 := (others => '0' );
     
     signal Dce_n, Dwe_n, Doe_n, Ice_n, Iwe_n, Ioe_n, ck, rst, rstCPU, hold, 
-           go_i, go_d, ce, rw, bw, ck_Mem: std_logic;
+           go_i, go_d, ce, rw, bw, ck_Mem, ck_L2, ce_l2, hitMem, hitL2, missL2: std_logic;
     
     file ARQ : TEXT open READ_MODE is "PCSpim.log";
  
@@ -207,8 +365,12 @@ begin
                                             
     Instr_mem: entity work.RAM_mem_Instr
                generic map( START_ADDRESS => x"00400020" )
-               port map (ce_n=>Ice_n, we_n=>Iwe_n, oe_n=>Ioe_n, bw=>'1', ck=>ck_Mem, address=>Iadress, data=>Idata);
-        
+               port map (ce_n=>Ice_n, we_n=>Iwe_n, oe_n=>Ioe_n, hit=>hitMem, bw=>'1', ck=>ck_Mem, address=>Iadress, data=>Idata);
+					
+	CacheL2: entity work.Cache_L2
+               port map (ce_n=>ce_L2, ck=>ck_L2, hitMem=>hitMem, hit=>hitL2, miss=>missL2, addressBack=>memAdd, addressFront=>L2Add, dataFront=>L2Data, dataBack=>Idata);
+		  
+	 ce_L2 <= '0' when rstCPU = '0' else '1';
     hold <= '0';                                 
 
     -- data memory signals --------------------------------------------------------
@@ -222,18 +384,18 @@ begin
     data_cpu <= Ddata when (ce='1' and rw='1') else (others=>'Z');
     
     -- instructions memory signals --------------------------------------------------------
-    Ice_n <= '0';                                 
+    Ice_n <= '0' when rstCPU='1' else not(missL2);                                 
     Ioe_n <= '1' when rstCPU='1' else '0';           -- impede leitura enquanto está escrevendo                             
     Iwe_n <= '0' when go_i='1'   else '1';           -- escrita durante a leitura do arquivo 
     
-    Iadress <= tb_add  when rstCPU='1' else i_cpu_address;
+    Iadress <= tb_add  when rstCPU='1' else memAdd;
     Idata   <= tb_data when rstCPU='1' else (others => 'Z'); 
   
 
     cpu: entity work.MRstd  port map(
-              clock=>ck, ck_Mem=>ck_Mem, reset=>rstCPU,	hold=>hold,
-              i_address => i_cpu_address,
-              instruction => Idata,
+              clock=>ck, ck_Mem=>hitL2, reset=>rstCPU,	hold=>hold,
+              i_address => L2Add,
+              instruction => L2Data,
               ce=>ce,  rw=>rw,  bw=>bw,
               d_address => d_cpu_address,
               data => data_cpu
@@ -251,6 +413,12 @@ begin
 		begin
 			ck_Mem <= '1', '0' after 40 ns;
 			wait for 80 ns;
+    end process;
+	 
+	 process                          -- generates the clock signal for cache L2
+		begin
+			ck_L2 <= '1', '0' after 20 ns;
+			wait for 40 ns;
     end process;
 
     

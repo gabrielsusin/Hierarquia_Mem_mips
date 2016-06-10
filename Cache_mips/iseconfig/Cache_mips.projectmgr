@@ -77,6 +77,7 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/CPU_tb - cpu_tb D:|GitHub|Hierarquia_Mem_mips|MR4 Simplificada e com Hold|mrStd_tb.vhd/cpu - MRstd - MRstd</ClosedNode>
+         <ClosedNode>/cpu_tb - cpu_tb D:|GitHub|Hierarquia_Mem_mips|MR4 Simplificada e com Hold|mrStd_tb.vhd/cpu - MRstd - MRstd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>CPU_tb - cpu_tb (D:/GitHub/Hierarquia_Mem_mips/MR4 Simplificada e com Hold/mrStd_tb.vhd)</SelectedItem>
